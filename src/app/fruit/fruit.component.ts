@@ -12,12 +12,12 @@ import {
   OnInit,
   Output,
   SimpleChanges
-} from "@angular/core";
+} from '@angular/core';
 
 @Component({
-  selector: "app-fruit",
-  templateUrl: "./fruit.component.html",
-  styleUrls: ["./fruit.component.scss"]
+  selector: 'app-fruit',
+  templateUrl: './fruit.component.html',
+  styleUrls: ['./fruit.component.scss']
 })
 export class FruitComponent
   implements
@@ -29,15 +29,15 @@ export class FruitComponent
     AfterViewInit,
     AfterViewChecked,
     OnDestroy {
-  @Input() public fruit: string;
+  @Input() public fruit?: string;
   @Output() private deleteF: EventEmitter<string> = new EventEmitter();
 
   constructor() {
-    console.log("Le constructeur");
+    console.log('Le constructeur');
   }
 
   ngOnInit() {
-    console.log("ngOnInit");
+    console.log('ngOnInit');
   }
 
   ngOnChanges(simpleChanges: SimpleChanges) {
@@ -45,27 +45,27 @@ export class FruitComponent
   }
 
   ngDoCheck() {
-    console.log("ngDoCheck");
+    console.log('ngDoCheck');
   }
 
   ngAfterContentInit() {
-    console.log("ngAfterContentInit");
+    console.log('ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log("ngAfterContentChecked");
+    console.log('ngAfterContentChecked');
   }
 
   ngAfterViewInit() {
-    console.log("ngAfterViewInit");
+    console.log('ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
-    console.log("ngAfterViewChecked");
+    console.log('ngAfterViewChecked');
   }
 
   ngOnDestroy() {
-    console.log("ngOnDestroy");
+    console.log('ngOnDestroy');
   }
 
   deleteFruit() {
